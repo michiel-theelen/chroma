@@ -82,7 +82,7 @@ var mySwiper3 = new Swiper ('.swiper-container3', {
   // Enable lazy loading
   lazy: {
     loadPrevNext: true,
-    loadPrevNextAmount: 1,
+    loadPrevNextAmount: 2,
     loadOnTransitionStart: true,
   },
 
