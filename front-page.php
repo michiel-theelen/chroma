@@ -1,4 +1,5 @@
 <!-- Loads header.php -->
+<!-- Loads header.php -->
 <?php get_header(); ?>
 
  <script src="js/parallax.js"></script>
