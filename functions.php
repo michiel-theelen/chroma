@@ -2,20 +2,10 @@
 
 // Adds scripts and stylesheets
 function startwordpress_scripts() {
-
 	// Loads global stylesheets
 	wp_enqueue_style( 'style', get_template_directory_uri() . '/css/main.css' );
 }
-
 add_action( 'wp_enqueue_scripts', 'startwordpress_scripts' );
-
-// Add Google Fonts
-function startwordpress_google_fonts() {
-				wp_register_style('OpenSans', '//fonts.googleapis.com/css?family=Open+Sans:400,600,700,800');
-				wp_enqueue_style( 'OpenSans', $in_footer);
-		}
-
-add_action('wp_print_styles', 'startwordpress_google_fonts');
 
 // WordPress Titles
 function startwordpress_wp_title( $title, $sep ) {
@@ -111,22 +101,6 @@ function wpb_custom_new_menu() {
   );
 }
 add_action( 'init', 'wpb_custom_new_menu' );
-
-/* Font Awesome Kit Setup */
-if (! function_exists('fa_custom_setup_kit') ) {
-  function fa_custom_setup_kit($kit_url = '') {
-    foreach ( [ 'wp_enqueue_scripts', 'admin_enqueue_scripts', 'login_enqueue_scripts' ] as $action ) {
-      add_action(
-        $action,
-        function () use ( $kit_url ) {
-          wp_enqueue_script( 'font-awesome-kit', $kit_url, [], null );
-        }
-      );
-    }
-  }
-}
-fa_custom_setup_kit('https://kit.fontawesome.com/2fb71f4de1.js');
-
 
 // Customizer File
 require get_template_directory(). '/inc/customizer.php';

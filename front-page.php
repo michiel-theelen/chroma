@@ -15,26 +15,16 @@
     <!-- Additional required wrapper -->
     <div class="swiper-wrapper">
         <!-- Slides -->
-        <div class="swiper-slide" style="background-image:
-        url(<?php echo get_template_directory_uri(); ?>/images/websites/160712gguplan870x630.jpg);"></div>
-        <div class="swiper-slide" style="background-image:
-        url(<?php echo get_template_directory_uri(); ?>/images/websites/deElementenhome870x630.jpg"></div>
-        <div class="swiper-slide" style="background-image:
-        url(<?php echo get_template_directory_uri(); ?>/images/websites/fasiani_home870x630.jpg"></div>
-        <div class="swiper-slide" style="background-image:
-        url(<?php echo get_template_directory_uri(); ?>/images/websites/levenswerken870x630.jpg);"></div>
-        <div class="swiper-slide" style="background-image:
-        url(<?php echo get_template_directory_uri(); ?>/images/websites/nsg870x630.jpg);"></div>
-        <div class="swiper-slide" style="background-image:
-        url(<?php echo get_template_directory_uri(); ?>/images/websites/zelhem870x630.jpg);"></div>
-        <div class="swiper-slide" style="background-image:
-        url(<?php echo get_template_directory_uri(); ?>/images/websites/190606poster100hardgenoeg870x630.jpg);"></div>
-        <div class="swiper-slide" style="background-image:
-        url(<?php echo get_template_directory_uri(); ?>/images/websites/brummen870x630.jpg);"></div>
-        <div class="swiper-slide" style="background-image:
-        url(<?php echo get_template_directory_uri(); ?>/images/websites/ggu870x630.jpg);"></div>
-        <div class="swiper-slide" style="background-image:
-        url(<?php echo get_template_directory_uri(); ?>/images/websites/minidigesteur870x630.jpg);"></div>
+        <div class="swiper-slide swiper-lazy" data-background="<?php echo get_template_directory_uri(); ?>/images/websites/160712gguplan870x630.jpg"></div>
+        <div class="swiper-slide swiper-lazy" data-background="<?php echo get_template_directory_uri(); ?>/images/websites/deElementenhome870x630.jpg"></div>
+        <div class="swiper-slide swiper-lazy" data-background="<?php echo get_template_directory_uri(); ?>/images/websites/fasiani_home870x630.jpg"></div>
+        <div class="swiper-slide swiper-lazy" data-background="<?php echo get_template_directory_uri(); ?>/images/websites/levenswerken870x630.jpg"></div>
+        <div class="swiper-slide swiper-lazy" data-background="<?php echo get_template_directory_uri(); ?>/images/websites/nsg870x630.jpg"></div>
+        <div class="swiper-slide swiper-lazy" data-background="<?php echo get_template_directory_uri(); ?>/images/websites/zelhem870x630.jpg"></div>
+        <div class="swiper-slide swiper-lazy" data-background="<?php echo get_template_directory_uri(); ?>/images/websites/190606poster100hardgenoeg870x630.jpg"></div>
+        <div class="swiper-slide swiper-lazy" data-background="<?php echo get_template_directory_uri(); ?>/images/websites/brummen870x630.jpg"></div>
+        <div class="swiper-slide swiper-lazy" data-background="<?php echo get_template_directory_uri(); ?>/images/websites/ggu870x630.jpg"></div>
+        <div class="swiper-slide swiper-lazy" data-background="<?php echo get_template_directory_uri(); ?>/images/websites/minidigesteur870x630.jpg"></div>
     </div>
 
     <!-- If we need navigation buttons -->
@@ -93,24 +83,15 @@
     <!-- Additional required wrapper -->
     <div class="swiper-wrapper">
         <!-- Slides -->
-        <div class="swiper-slide" style="background-image:
-        url(<?php echo get_template_directory_uri(); ?>/images/1240x827/_1605110048utrechtoudehortus1240x827.jpg);"></div>
-        <div class="swiper-slide" style="background-image:
-        url(<?php echo get_template_directory_uri(); ?>/images/1240x827/0305hauptbahnhof1240x827.jpg);"></div>
-        <div class="swiper-slide" style="background-image:
-        url(<?php echo get_template_directory_uri(); ?>/images/1240x827/0626spin1240x827.jpg);"></div>
-        <div class="swiper-slide" style="background-image:
-        url(<?php echo get_template_directory_uri(); ?>/images/1240x827/1004113706sassenheim-lisse1240x827.jpg);"></div>
-        <div class="swiper-slide" style="background-image:
-        url(<?php echo get_template_directory_uri(); ?>/images/1240x827/1006184070verbeeldingstuinfruit1240x827.jpg);"></div>
-        <div class="swiper-slide" style="background-image:
-        url(<?php echo get_template_directory_uri(); ?>/images/1240x827/1509190034tilburgdepont1240x827.jpg);"></div>
-        <div class="swiper-slide" style="background-image:
-        url(<?php echo get_template_directory_uri(); ?>/images/1240x827/1605220015oosterbeeklageoorsprong1240x827.jpg);"></div>
-        <div class="swiper-slide" style="background-image:
-        url(<?php echo get_template_directory_uri(); ?>/images/1240x827/1608220163noaberpad1240x827.jpg);"></div>
-        <div class="swiper-slide" style="background-image:
-        url(<?php echo get_template_directory_uri(); ?>/images/1240x827/1703311210wilgekatjes1240x827.jpg);"></div>
+        <div class="swiper-slide swiper-lazy" data-background="<?php echo get_template_directory_uri(); ?>/images/1240x827/_1605110048utrechtoudehortus1240x827.jpg"></div>
+        <div class="swiper-slide swiper-lazy" data-background="<?php echo get_template_directory_uri(); ?>/images/1240x827/0305hauptbahnhof1240x827.jpg"></div>
+        <div class="swiper-slide swiper-lazy" data-background="<?php echo get_template_directory_uri(); ?>/images/1240x827/0626spin1240x827.jpg"></div>
+        <div class="swiper-slide swiper-lazy" data-background="<?php echo get_template_directory_uri(); ?>/images/1240x827/1004113706sassenheim-lisse1240x827.jpg"></div>
+        <div class="swiper-slide swiper-lazy" data-background="<?php echo get_template_directory_uri(); ?>/images/1240x827/1006184070verbeeldingstuinfruit1240x827.jpg"></div>
+        <div class="swiper-slide swiper-lazy" data-background="<?php echo get_template_directory_uri(); ?>/images/1240x827/1509190034tilburgdepont1240x827.jpg);"></div>
+        <div class="swiper-slide swiper-lazy" data-background="<?php echo get_template_directory_uri(); ?>/images/1240x827/1605220015oosterbeeklageoorsprong1240x827.jpg"></div>
+        <div class="swiper-slide swiper-lazy" data-background="<?php echo get_template_directory_uri(); ?>/images/1240x827/1608220163noaberpad1240x827.jpg"></div>
+        <div class="swiper-slide swiper-lazy" data-background="<?php echo get_template_directory_uri(); ?>/images/1240x827/1703311210wilgekatjes1240x827.jpg"></div>
     </div>
 
     <!-- Navigation buttons -->

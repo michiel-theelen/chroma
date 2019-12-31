@@ -8,6 +8,11 @@ var mySwiper = new Swiper ('.swiper-container1', {
   centeredSlides: true,
   spaceBetween: 5,
 
+  // Disable preloading of all images
+  preloadImages: false,
+  // Enable lazy loading
+  lazy: true,
+
   // If we need pagination
   pagination: {
     el: '.swiper-pagination1',
@@ -68,6 +73,13 @@ var mySwiper3 = new Swiper ('.swiper-container3', {
   spaceBetween: 0,
   effect: 'fade',
   crossFade: true,
+
+  // Disable preloading of all images
+  preloadImages: false,
+  // Enable lazy loading
+  lazy: true,
+  loadPrevNext: true,
+  loadPrevNextAmount: 1, 
 
   autoplay: {
     delay: 3500,
