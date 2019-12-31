@@ -10,8 +10,11 @@ var mySwiper = new Swiper ('.swiper-container1', {
 
   // Disable preloading of all images
   preloadImages: false,
-  // Enable lazy loading
-  lazy: true,
+  lazy: {
+    loadPrevNext: true,
+    loadPrevNextAmount: 1,
+    loadOnTransitionStart: true,
+  },
 
   // If we need pagination
   pagination: {
@@ -77,9 +80,11 @@ var mySwiper3 = new Swiper ('.swiper-container3', {
   // Disable preloading of all images
   preloadImages: false,
   // Enable lazy loading
-  lazy: true,
-  loadPrevNext: true,
-  loadPrevNextAmount: 1, 
+  lazy: {
+    loadPrevNext: true,
+    loadPrevNextAmount: 1,
+    loadOnTransitionStart: true,
+  },
 
   autoplay: {
     delay: 3500,
