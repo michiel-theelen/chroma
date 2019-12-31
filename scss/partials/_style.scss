@@ -1,0 +1,633 @@
+/*
+Theme Name: chroma
+Description: Bert's Blog
+Author: Michiel Theelen
+Version: 0.1
+*/
+
+/* ------------------------------------------------
+ * Declaration of variables
+ * --------------------------------------------- */
+
+:root {
+  --navbar-background: white;
+  --navbar-height: 50px;
+  --navli-height: 50px;
+  --blog-color: rgb(0, 132, 165);
+}
+
+/* ------------------------------------------------
+ * Main Styling
+ * --------------------------------------------- */
+.fa{
+  opacity: 0.8;
+}
+.fa:hover{
+  opacity: 1.0;
+}
+
+html, body {
+  -webkit-font-smoothing: antialiased;
+
+  height: 100vh;
+  width: 100%;
+
+  margin: 0;
+  padding: 0;
+
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
+  font-display: swap;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  color: #555;
+  background-color: white;
+
+  scroll-behavior: smooth;
+  }
+
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+width: 100%;
+
+margin: 0;
+margin-bottom: 20px;
+padding: 0;
+
+color: rgb(102, 102, 102);
+border-bottom-color: rgb(222, 222, 222);
+border-bottom-style: solid;
+border-bottom-width: 2px;
+
+font-size: 30px;
+font-weight: 200;
+line-height: 50px;
+color: rgb(102, 102, 102);
+color: black;
+}
+
+h2 {
+color: black;
+font-size: 21px;
+line-height: 30px;
+font-weight: 200;
+margin-bottom: 20px;
+}
+
+h3 {
+  color: rgb(102, 102, 102);
+  font-size: 18px;
+  font-weight: 200;
+  text-align: left;
+
+  margin-top: 0px;
+  margin-bottom: 0px;
+
+  color: black;
+}
+
+code, pre {
+  font-family: "Share Tech Mono";
+  font-size: 0.8em;
+}
+
+img{
+  height:100%;
+}
+
+p{
+  font-size: 15px;
+  line-height: 19px;
+
+  margin-top: 0;
+  margin-bottom: 10px;
+
+  vertical-align: baseline;
+}
+
+a{
+  text-decoration: none;
+  color: var(--blog-color);
+  opacity: 0.8;
+}
+
+a:hover{
+  opacity: 1;
+}
+
+/* ------------------------------------------------
+ * Parallax styling (for non-parallax as well)
+ * --------------------------------------------- */
+
+/* Scrolling container */
+.viewport
+ {
+    height: 100vh; /* Don't change! */
+    width: 100%; /* Don't change! */
+
+    margin: auto;
+    padding: 0;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    position: fixed;
+    -webkit-overflow-scrolling: touch;
+    text-align: center;
+
+    scroll-behavior: smooth;
+    perspective: 300px;
+    perspective-origin: center;
+}
+
+/* Width of the page */
+.viewport > div {
+  width: 95%;
+  max-width: 1400px;
+  margin:auto;
+}
+
+/* Non-parallax elements */
+.scene {
+  position: relative;
+  height: auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 2;
+}
+
+/* class for parallax elements:;
+ scale() = 1 + ((translateZ * -1) / perspective) */
+.parallax {
+  position: relative;
+  z-index: 1;
+
+  background-size: cover;
+  background-position: top;
+
+  height: 99.9vh; /* set height */
+  margin-bottom: -99.9vh;  /* undo height */
+}
+#intro .content {
+  padding-top: 0;
+}
+
+.content {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0;
+  padding: 50px 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+
+/* ------------------------------------------------
+ * Header Styles
+ * --------------------------------------------- */
+
+#header .logo-container{
+  position: relative;
+  z-index: 4;
+}
+
+#header .logo{
+    width: 100%;
+    height: 50vw;
+    max-width: 1100px;
+    max-height: 300px;
+    padding: 20px 10% 0 2%;
+
+    background-color: white;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-origin: content-box;
+}
+
+/* ------------------------------------------------
+ * Navigation styles
+ * --------------------------------------------- */
+
+  nav {
+  position: relative;
+  width: 100%;
+
+  height: auto;
+  max-height: var(--navbar-height);
+
+  background-color: var( --navbar-background);
+  margin-bottom: 50px;
+  z-index: 999;
+}
+
+    #main-nav .menu-hoofdmenu-container{
+    position: relative;
+    width: auto;
+    height: auto;
+  }
+
+        #main-nav ul {
+          position: relative;
+          background-color: var( --navbar-background);
+
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: flex-end;
+          align-content: center;
+          align-items: center;
+
+          margin: 0;
+          list-style: none;
+          width: 100%;
+          height: auto;
+        }
+
+            #main-nav li {
+              position: relative;
+              height: var(--navbar-height);
+              padding: 0 20px;
+
+              display: flex;
+              align-items: center;
+            }
+
+                #main-nav a {
+                  color: #777;
+                  font-size: 18px;
+                }
+
+                    #main-nav a:hover {
+                      color: black;
+                    }
+
+                    #main-nav .current_page_item a{
+                      color: black !important;
+                    }
+
+                    #menu-toggle span,
+                    #menu-toggle input[type="checkbox"] {
+                      display: none;
+                    }
+
+
+@media screen and (max-width: 800px) {
+
+  #main-nav ul {
+   position: relative;
+
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+
+   margin: auto;
+   padding: var(--navbar-height) 10px;
+   width: 95vw;
+   text-align: center;
+
+  }
+
+  #main-nav li {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+
+    border-bottom-color: rgb(66,66,66);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+  }
+
+  #main-nav .menu-hoofdmenu-container{
+    position: absolute;
+    background-color: white;
+    height: auto;
+    height: 0;
+    opacity: 1;
+    transition: height 0.5s ease,
+                box-shadow 0.5s ease;
+    overflow: hidden;
+
+    -webkit-box-shadow: 0px 10px 20px 0px rgba(0,0,0,0);
+    -moz-box-shadow: 0px 10px 20px 0px rgba(0,0,0,0);
+    box-shadow: 0px 10px 20px 0px rgba(0,0,0,0);
+    z-index: 1;
+  }
+
+  #menu-toggle  {
+    position: relative;
+    z-index: 3;
+    -webkit-user-select: none;
+    user-select: none;
+
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+  }
+
+  /* Creates new "Hamburger" Icon */
+  .hamburger{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+
+
+    height: var(--navbar-height);
+    padding: 11px calc(10px * 1.25);
+    width: var(--navbar-height);
+    margin: 0 0;
+    z-index: 2;
+
+    transform-origin: 0 50%;
+    transform: scale(0.8);
+    text-align: left;
+  }
+
+  #menu-toggle:hover span{
+    background: black;
+  }
+
+  #menu-toggle span
+  {
+    display: block;
+    width: 33px;
+    height: 2px;
+    margin: 0;
+    position: relative;
+
+    opacity: 1;
+
+    background: #555;
+    border-radius: 3px;
+
+    transform-origin: 0 0;
+    transition: transform 0.5s ease,
+                opacity 0.5s ease;
+  }
+
+  #menu-toggle input[type="checkbox"] {
+    display: block;
+    position: absolute;
+    top: 0; left: 0;
+    height: 100%;
+    width: 50px;
+    margin: 0 10px;
+    opacity: 0;
+    z-index: 3;
+
+  }
+
+  /* animates burger to cross */
+  /* Rotates first one*/
+  #menu-toggle input:checked ~.hamburger span:nth-child(1) {
+    transform: rotate(45deg) translate(0px, -4px);
+    transform-origin: 0% 100%;
+    margin-top: 0px;
+  }
+  /* Rotates last one*/
+  #menu-toggle input:checked ~ .hamburger span:nth-child(3) {
+    transform: rotate(-45deg) translate(0px, 4px);
+    transform-origin: 0% 0%;
+    margin-bottom: 0px;
+  }
+
+  /* Hides the middle one.*/
+  #menu-toggle input:checked ~ .hamburger span:nth-child(2) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+  }
+
+  #main-nav li:last-child {
+    border-bottom: none;
+  }
+
+  /* Expands and contracts container */
+  #menu-toggle input:checked ~ .menu-hoofdmenu-container  {
+    height: 100vh;
+    max-height: 100vh;
+    background-color: white;
+    opacity: 1;
+
+    -webkit-box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.1);
+    -moz-box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.1);
+    box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.1);
+  }
+}
+
+/* ------------------------------------------------
+ * Front page styling
+ * --------------------------------------------- */
+
+
+/* SLIDER 1
+------------------------------------------*/
+
+.swiper-container1 {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width:100%;
+  overflow:hidden;
+
+  background-color: white;
+}
+
+#slider1 .swiper-slide {
+  position: relative;
+
+  width: 90vw;
+  height: 70vw;
+
+  max-width: 870px;
+  max-height: 620px;
+
+  min-height: 430px;
+  min-width: 600px;
+  background-size: cover;
+  background-position: top;
+}
+
+/* SLIDER 2
+------------------------------------------*/
+
+.swiper-container2 {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 0;
+    margin: 20px 0;
+    background-color: white;
+}
+
+#slider2 .swiper-slide {
+  position: relative;
+  -webkit-cursor: ew-resize;
+  cursor: pointer;
+
+  height: 250px;
+  width: 250px;
+  min-height: 0;
+  min-width: 0;
+  opacity: 0.2;
+  margin: 20px 30px;
+
+  transform: scale3d(0.6,0.6,1);
+  transition: all 1s ease-in-out;
+
+  background-size: cover;
+}
+
+#slider2 .swiper-slide-active {
+    transform: scale3d(1,1,1);
+    opacity: 1.0;
+    transition: all 1s ease-in-out;
+}
+
+/* SLIDER 3
+------------------------------------------*/
+
+.swiper-container3 {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding: 0;
+  background-color: white;
+}
+
+#slider3 .swiper-slide {
+  position: relative;
+
+  width: 100%;
+  height: 100vh;
+
+  background-size: cover;
+  background-position: center;
+}
+
+/* ----------------------------------------
+/* OTHER
+------------------------------------------*/
+
+#ontwerpkosten .content{
+  margin:15vh;
+}
+
+#ontwerpkosten h1{
+  border-bottom: none;
+  color: white;
+}
+
+/* ------------------------------------------------
+ * Background colors and gradients
+ * --------------------------------------------- */
+
+.grey{
+  background: #efefef;
+}
+
+.blue{
+  background: #D7EAFF;
+}
+
+.white{
+  background: white;
+}
+
+.gradient1{
+    background-image: linear-gradient(to bottom right, yellow, red);
+}
+.gradient2{
+    background-image: linear-gradient(to bottom right, #9fb8ad, #1fc8db 51%, #2cb5e8 75%);
+}
+.gradient3{
+    background-image: linear-gradient(to bottom right, lightgreen, darkgreen);
+}
+
+/* ------------------------------------------------
+ * Swiper styles
+ * --------------------------------------------- */
+
+.swiper-wrapper{
+    width:100%;
+    height: 100%;
+    align-items: center;
+}
+
+.swiper-button-prev{
+}
+
+.swiper-button-next{
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-size: cover;
+  background-position: center;
+}
+
+.swiper-slide img {
+  flex-shrink: 0;
+
+  width: 100%;
+  height: 100%;
+
+  min-width: 100%;
+  min-height: 100%
+}
+
+/* ------------------------------------------------
+ * Shadow styles
+ * --------------------------------------------- */
+
+.shadow-text {
+    text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+}
+.shadow {
+  -webkit-box-shadow: 0px 13px 25px -20px rgba(0,0,0,0.5);
+  -moz-box-shadow: 0px 13px 25px -20px rgba(0,0,0,0.5);
+  box-shadow: 0px 13px 25px -20px rgba(0,0,0,0.5);
+}
+
+
+/* ------------------------------------------------
+ * Sticky styles
+ * --------------------------------------------- */
+
+.sticky {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+}
+
+.sticky-ten {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: calc(var(--navbar-height) + 50px);
+}

@@ -1,0 +1,118 @@
+/*
+ * MEDIA QUERIES
+ */
+
+@media screen and (max-width: 800px) {
+
+  #menu-toggle  {
+    position: relative;
+    z-index: 3;
+    -webkit-user-select: none;
+    user-select: none;
+
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+  }
+
+  /* Creates new "Hamburger" Icon */
+  .hamburger{
+    position: relative;
+    height: auto;
+    width: calc(var(--navbar-height) + 40px);
+    margin: auto 0;
+  }
+
+  #menu-toggle span
+  {
+    display: block;
+    width: 33px;
+    height: 2px;
+    margin: 7px 0 7px 0;
+    position: relative;
+
+    opacity: 1;
+
+    background: rgb(66,66,66);
+    border-radius: 3px;
+
+    transform-origin: 0px 0px;
+    transition: transform 0.7s cubic-bezier(0.77,0.2,0.05,1.0),
+                background 0.7s cubic-bezier(0.77,0.2,0.05,1.0),
+                opacity 0.7s ease;
+  }
+
+   /* shows checkbox icon */
+  #menu-toggle span {
+    display: block;
+  }
+
+  #menu-toggle input[type="checkbox"] {
+    display: block;
+    opacity: 0;
+
+  }
+
+  /* Transforms all the slices of hamburger
+   * into a crossmark. */
+
+  #menu-toggle input ~ .hamburger span:nth-last-child(3) {
+
+  }
+
+  #menu-toggle input ~ .hamburger span:nth-last-child(1) {
+
+  }
+
+  /* Rotates first and last 45 degrees */
+  #menu-toggle input:checked ~.hamburger span:nth-last-child(3) {
+    transform: rotate(45deg) translate(0px, -4px);
+    transform-origin: 0% 100%;
+    margin-top: 0px;
+  }
+
+  #menu-toggle input:checked ~ .hamburger span:nth-last-child(1) {
+    transform: rotate(-45deg) translate(0px, 4px);
+    transform-origin: 0% 0%;
+    margin-bottom: 0px;
+  }
+
+  /* Hides the middle one.*/
+  #menu-toggle input:checked ~ .hamburger span:nth-last-child(2) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+  }
+
+    #menu-toggle input:hover ~.hamburger span {
+    background: black;
+  }
+
+   #menu-item-1843 {
+    border-bottom-color: transparent;
+  }
+
+  /* Expands and contracts container */
+  #menu-toggle input:checked ~ .menu-hoofdmenu-container  {
+    max-height: calc(4*var(--navli-height));
+    background-color: white;
+    opacity: 1;
+
+    -webkit-box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.1);
+    -moz-box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.1);
+    box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.1);
+  }
+
+   input:hover ~ .hamburger{
+        background: red;
+        color: blue;
+    }
+
+    #header .logo-container{
+      padding: 0;
+    }
+}
