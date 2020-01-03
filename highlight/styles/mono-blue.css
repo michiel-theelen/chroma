@@ -1,0 +1,56 @@
+/*
+  Five-color theme from a single blue hue.
+*/
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  background: #eaeef3;
+  color: #00193a;
+}
+
+.code-keyword,
+.code-selector-tag,
+.code-title,
+.code-section,
+.code-doctag,
+.code-name,
+.code-strong {
+  font-weight: bold;
+}
+
+.code-comment {
+  color: #738191;
+}
+
+.code-string,
+.code-title,
+.code-section,
+.code-built_in,
+.code-literal,
+.code-type,
+.code-addition,
+.code-tag,
+.code-quote,
+.code-name,
+.code-selector-id,
+.code-selector-class {
+  color: #0048ab;
+}
+
+.code-meta,
+.code-subst,
+.code-symbol,
+.code-regexp,
+.code-attribute,
+.code-deletion,
+.code-variable,
+.code-template-variable,
+.code-link,
+.code-bullet {
+  color: #4c81c9;
+}
+
+.code-emphasis {
+  font-style: italic;
+}

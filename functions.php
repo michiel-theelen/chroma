@@ -4,8 +4,26 @@
 function startwordpress_scripts() {
 	// Loads global stylesheets
 	wp_enqueue_style( 'style', get_template_directory_uri() . '/css/main.css' );
+	wp_enqueue_script('highlightjs', get_template_directory_uri() . '/highlight/highlight.pack.js');
+	wp_enqueue_script('livesearch', get_template_directory_uri() .'/js/livesearch.js', array('jquery'), null, true);
 }
 add_action( 'wp_enqueue_scripts', 'startwordpress_scripts' );
+
+// Load highlightjs from cdn
+function add_highlightjs_cdn()
+{
+	wp_enqueue_style( 'highlightjs', get_template_directory_uri() . '/highlight/styles/mono-blue.css', array(), '9.15.6', 'all' );
+	wp_enqueue_script('highlightjs', get_template_directory_uri() . '/highlight/highlight.pack.js', array(), '9.15.6', false);
+}
+add_action('wp_enqueue_scripts', 'add_highlightjs_cdn');
+
+function load_highlightjs_script()
+{
+	?>
+	<script>hljs.initHighlightingOnLoad();</script>
+	<?php
+}
+add_action('wp_footer', 'load_highlightjs_script');
 
 // WordPress Titles
 function startwordpress_wp_title( $title, $sep ) {

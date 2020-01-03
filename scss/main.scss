@@ -1,3 +1,20 @@
+@import 'partials/base/blocks';
+@import 'partials/base/comments';
+@import 'partials/base/cssBase';
+@import 'partials/base/documentSetup';
+@import 'partials/base/elementBase';
+@import 'partials/base/entryContent';
+@import 'partials/base/error404';
+@import 'partials/base/helperClasses';
+@import 'partials/base/mediaQueries';
+@import 'partials/base/menuModal';
+@import 'partials/base/postArchive';
+@import 'partials/base/postSingle';
+@import 'partials/base/searchModal';
+@import 'partials/base/siteFooter';
+@import 'partials/base/siteHeader';
+@import 'partials/base/sitePagination';
+@import 'partials/base/widgets';
 
 @import 'partials/header';
 @import 'partials/style';

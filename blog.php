@@ -7,14 +7,72 @@ get_header(); ?>
 <main id="blog">
 
 
-	<div id="intro" class="scene">
-	    <div class="content" style="padding-top:0">
-	    	<h1>Blog</h1>
-	        <p>Chroma2 is Bert Theelen, grafisch vormgever van communicatie-middelen die bestaan uit tekst en beeld. Bij het bedenken en uitwerken daarvan kan ik u van dienst zijn, op basis van brede vakkennis en praktijkervaring. Ik werk zelfstandig vanuit mijn woonplaats Deventer, met opdrachtgevers verspreid over het land. Samen werken we aan hoogwaardige producten, van logo tot website, van flyer tot boek.</p>
-	    </div>
+	<div id="intro" class="scene" style="display: flex; flex-wrap: wrap; flex-direction: row">
+	    	<h1 style="display: inline-block; min-width: 200px; margin-top: 0;">Blog</h1>
+	      <p style="flex: 1; min-width: 67%">Chroma is Bert Theelen, grafisch vormgever van communicatie-middelen die bestaan uit tekst en beeld. Bij het bedenken en uitwerken daarvan kan ik u van dienst zijn, op basis van brede vakkennis en praktijkervaring. Ik werk zelfstandig vanuit mijn woonplaats Deventer, met opdrachtgevers verspreid over het land. Samen werken we aan hoogwaardige producten, van logo tot website, van flyer tot boek.</p>
 	</div>
 
-	<!-- <h1 class="blog-title"><?php the_title(); ?></h1>  -->
+	<style>
+.container {
+  margin-top: 20px;
+  overflow: hidden;
+	float: right;
+}
+
+/* Style the buttons */
+.search-container {
+	display: flex;
+}
+
+.category-filter {
+display: inline-block;
+align-items: center;
+font-size: 1.6rem;
+padding: 1em 1em;
+background: #ebf1fe;
+border-radius: 4px;
+margin: 0 .5em;
+height: 100%;
+font-weight: 600;
+color: #5183f5;
+cursor: pointer;
+border: none;
+}
+
+.category-filter:hover{
+	text-decoration: none;
+}
+.category-container .category-filter.active:hover {
+color: #fff;
+background: #2161f2;
+}
+.category-container .category-filter:hover {
+background: #d8e3fd;
+color: #3972f4;
+}
+.category-container .category-filter.active {
+background: #5183f5;
+color: #fff;
+}
+
+</style>
+
+<div class="search-container">
+	<fieldset>
+			<input type="search" class="text-input" id="live-search" style="flex:1;" placeholder="Type hier om te zoeken binnen mijn blog..." />
+			<!-- <span id="filter-count" style="display: flex; align-self: center; height: 50px; line-height:50px;width: 30px; margin-left: 1em; color: var(--blog-color);" ></span> -->
+	</fieldset>
+
+	<div class="category-container" style="">
+		<!-- <button class="category-filter">Alles</button> -->
+		<?php $categories=get_categories($cat_args);
+		  foreach($categories as $category) {
+		    echo '<button class="category-filter" id="category-' . $category->slug . '">' . $category->name . '</button>';
+		  } // foreach($categories
+		?>
+	</div> <!-- category-container -->
+</div> <!-- search-container -->
+
 	<?php while ( have_posts() ) : the_post(); ?>
 
 		<?php
@@ -25,9 +83,11 @@ get_header(); ?>
 			$q    = new WP_Query( $args );
 		?>
 
-		<div class="blog-container">
+		<div class="blog-container" >
+
 			<?php while ( $q->have_posts() ) : $q->the_post(); ?>
-				<div class="blog-post">
+
+				<div <?php post_class( 'blog-post' ); ?>>
 					<a href="<?php the_permalink(); ?>">
 						<div class="blog-post-thumbnail">
 							<div class="blog-post-thumbnail-container">
@@ -50,8 +110,8 @@ get_header(); ?>
 						<span class="blog-post-date" style="width:auto">
 							<?php echo get_the_date(); ?>
 						</span>
-						<div class="blog-post-excerpt">
-							<p><?php the_excerpt(); ?></p>
+						<div class="blog-post-excerpt" style="height:100px; overflow: hidden; text-overflow: ellipsis;">
+							<?php the_content(); ?>
 						</div>
 						<a href="<?php the_permalink(); ?>">
 								<p style="color: rgb(0, 132, 165); font-size:14px; text-align: left;">

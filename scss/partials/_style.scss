@@ -16,33 +16,18 @@ Version: 0.1
   --blog-color: rgb(0, 132, 165);
 }
 
-/* ------------------------------------------------
- * Main Styling
- * --------------------------------------------- */
-.fa{
-  opacity: 0.8;
-}
-.fa:hover{
-  opacity: 1.0;
-}
 
 html, body {
   -webkit-font-smoothing: antialiased;
 
   height: 100vh;
   width: 100%;
-
   margin: 0;
   padding: 0;
-
-  font-family: 'Open Sans', sans-serif;
-  font-size: 15px;
-  font-display: swap;
 
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
 
   color: #555;
   background-color: white;
@@ -50,77 +35,6 @@ html, body {
   scroll-behavior: smooth;
   }
 
-* {
-  box-sizing: border-box;
-}
-
-h1 {
-width: 100%;
-
-margin: 0;
-margin-bottom: 20px;
-padding: 0;
-
-color: rgb(102, 102, 102);
-border-bottom-color: rgb(222, 222, 222);
-border-bottom-style: solid;
-border-bottom-width: 2px;
-
-font-size: 30px;
-font-weight: 200;
-line-height: 50px;
-color: rgb(102, 102, 102);
-color: black;
-}
-
-h2 {
-color: black;
-font-size: 21px;
-line-height: 30px;
-font-weight: 200;
-margin-bottom: 20px;
-}
-
-h3 {
-  color: rgb(102, 102, 102);
-  font-size: 18px;
-  font-weight: 200;
-  text-align: left;
-
-  margin-top: 0px;
-  margin-bottom: 0px;
-
-  color: black;
-}
-
-code, pre {
-  font-family: "Share Tech Mono";
-  font-size: 0.8em;
-}
-
-img{
-  height:100%;
-}
-
-p{
-  font-size: 15px;
-  line-height: 19px;
-
-  margin-top: 0;
-  margin-bottom: 10px;
-
-  vertical-align: baseline;
-}
-
-a{
-  text-decoration: none;
-  color: var(--blog-color);
-  opacity: 0.8;
-}
-
-a:hover{
-  opacity: 1;
-}
 
 /* ------------------------------------------------
  * Parallax styling (for non-parallax as well)
@@ -129,8 +43,8 @@ a:hover{
 /* Scrolling container */
 .viewport
  {
-    height: 100vh; /* Don't change! */
-    width: 100%; /* Don't change! */
+    height: 100vh;
+    width: 100%;
 
     margin: auto;
     padding: 0;
@@ -140,7 +54,6 @@ a:hover{
 
     position: fixed;
     -webkit-overflow-scrolling: touch;
-    text-align: center;
 
     scroll-behavior: smooth;
     perspective: 300px;
@@ -150,44 +63,17 @@ a:hover{
 /* Width of the page */
 .viewport > div {
   width: 95%;
-  max-width: 1400px;
+  max-width: 1200px;
   margin:auto;
 }
 
-/* Non-parallax elements */
-.scene {
-  position: relative;
-  height: auto;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  z-index: 2;
-}
-
-/* class for parallax elements:;
- scale() = 1 + ((translateZ * -1) / perspective) */
-.parallax {
-  position: relative;
-  z-index: 1;
-
-  background-size: cover;
-  background-position: top;
-
-  height: 99.9vh; /* set height */
-  margin-bottom: -99.9vh;  /* undo height */
-}
 #intro .content {
   padding-top: 0;
 }
 
 .content {
   width: 90%;
-  max-width: 1200px;
-  margin: 0;
-  padding: 50px 0;
+  margin: auto;
 
   display: flex;
   flex-direction: column;

@@ -2,8 +2,6 @@
 <!-- Loads header.php -->
 <?php get_header(); ?>
 
- <script src="js/parallax.js"></script>
-
 <!-- Introduction text -->
 <div id="intro" class="scene">
     <div class="content">
@@ -31,6 +29,20 @@
     <!-- If we need navigation buttons -->
     <div class="swiper-button-prev swiper-button-white swiper-button-prev1" style="width:40px;height:40px;"></div>
     <div class="swiper-button-next swiper-button-white swiper-button-next1" style="width:40px;height:40px;"></div>
+</div>
+
+<div id="vorm" class="scene grey">
+    <div class="content">
+        <h1>Vorm met inhoud</h1>
+        <p>‘Form follows function’ is een bekend principe in moderne architectuur en industriële vormgeving, maar ook van toepassing op grafische vormgeving. De vorm is als een solide kapstok, die geschikt is om een uiting of visie aan op te hangen. Dat betekent niet dat vormgeving neutraal is, want zij kan op verschillende manieren specifieke ondersteuning geven: leesbaarheid, toegankelijkheid, identiteit, design. Het betekent wel dat vormgeving dienstbaar is. Voor effectieve vormgeving moet er vooral goed worden nagedacht over de inhoud. Wat is belangrijk en wat is minder belangrijk, wat is overbodig en wat ontbreekt. De vormgeving vloeit daar dan op een vanzelfsprekende manier uit voort.</p>
+    </div>
+</div>
+
+<div id="inspiratie" class="scene blue" style="margin-bottom: 40px">
+    <div class="content">
+        <p>Inspiratie kun je ver zoeken maar ook dichtbij. Want inspiratie zit in de manier van kijken. In de natuur, onder de mensen, in een museum of op een festival. Er is veel te zien en beleven. Fotografie is de manier om zichtbaar te maken wat mij zoal beweegt. Het kunnen kleine dingen dicht bij huis. Maar ook bijzondere gebeurtenissen, waar ik getuige van mocht zijn. Bij elkaar vormen ze een beeld van hoe ik als creatief mens in het leven sta.</p>
+        <p><i>Allle fotografie is van mijzelf tenzij anders aangegeven.</i></p>
+    </div>
 </div>
 
 <!-- Slider container with logos-->
@@ -65,20 +77,6 @@
     </div>
 </div>
 
-<div id="vorm" class="scene grey">
-    <div class="content">
-        <h1>Vorm met inhoud</h1>
-        <p>‘Form follows function’ is een bekend principe in moderne architectuur en industriële vormgeving, maar ook van toepassing op grafische vormgeving. De vorm is als een solide kapstok, die geschikt is om een uiting of visie aan op te hangen. Dat betekent niet dat vormgeving neutraal is, want zij kan op verschillende manieren specifieke ondersteuning geven: leesbaarheid, toegankelijkheid, identiteit, design. Het betekent wel dat vormgeving dienstbaar is. Voor effectieve vormgeving moet er vooral goed worden nagedacht over de inhoud. Wat is belangrijk en wat is minder belangrijk, wat is overbodig en wat ontbreekt. De vormgeving vloeit daar dan op een vanzelfsprekende manier uit voort.</p>
-    </div>
-</div>
-
-<div id="inspiratie" class="scene blue" style="margin-bottom: 40px">
-    <div class="content">
-        <p>Inspiratie kun je ver zoeken maar ook dichtbij. Want inspiratie zit in de manier van kijken. In de natuur, onder de mensen, in een museum of op een festival. Er is veel te zien en beleven. Fotografie is de manier om zichtbaar te maken wat mij zoal beweegt. Het kunnen kleine dingen dicht bij huis. Maar ook bijzondere gebeurtenissen, waar ik getuige van mocht zijn. Bij elkaar vormen ze een beeld van hoe ik als creatief mens in het leven sta.</p>
-        <p><i>Allle fotografie is van mijzelf tenzij anders aangegeven.</i></p>
-    </div>
-</div>
-
 <!-- Slider main container -->
 <div id="slider3" class="swiper-container3" style="margin:0;">
     <!-- Additional required wrapper -->
@@ -101,17 +99,9 @@
 
 </div>
 
-<div id="compact" class="scene" style="background-color: white;">
+<div style="background-image: url(<?php echo get_theme_mod('quote_image', get_bloginfo('template_url').'/images/quote.jpg'); ?>); background-size: 100% auto;">
     <div class="content">
-        <h1>Compact en flexibel</h1>
-        <p>De Chroma studio heeft wel wat weg van een cockpit. Alles wat nodig is om efficiënt te werken binnen handbereik. En altijd een directe lijn. Compact betekent ook: lage overhead. Dus een praktische aanpak en geen onnodige kosten.</p>
-    </div>
-</div>
-
-<div class="parallax" style="background-image: url(<?php echo get_theme_mod('quote_image', get_bloginfo('template_url').'/images/quote.jpg'); ?>); background-size: 100% auto;"></div>
-<div id="ontwerpkosten" class="scene">
-    <div class="content">
-        <h1>Ontwerpkosten zijn relatief: een goed ontwerp maakt efficiënt gebruik van materialen en ruimte. En is daardoor vaak ook kostenbesparend."</h1>
+        <h1 style="color:white">"Een goed ontwerp maakt efficiënt gebruik van materialen en ruimte."</h1>
     </div>
 </div>
 
