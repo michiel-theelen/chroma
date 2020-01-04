@@ -22,19 +22,12 @@ Version: 0.1
 html, body {
   -webkit-font-smoothing: antialiased;
 
-  height: 100vh;
-  width: 100%;
   margin: 0;
   padding: 0;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  color: #555;
   background-color: white;
 
   scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
   }
 
 
@@ -45,27 +38,17 @@ html, body {
 /* Scrolling container */
 .viewport
  {
-    height: 100vh;
-    width: 100%;
+    width: 95%;
+    max-width: 1200px;
 
     margin: auto;
     padding: 0;
-
-    overflow-x: hidden;
-    overflow-y: auto;
-
-    position: fixed;
-    -webkit-overflow-scrolling: touch;
-
-    scroll-behavior: smooth;
-    perspective: 300px;
-    perspective-origin: center;
 }
 
 /* Width of the page */
 .viewport > div {
   width: 95%;
-  max-width: 1200px;
+
   margin:auto;
 }
 
@@ -91,8 +74,6 @@ html, body {
 
 header .logo-container{
   position: relative;
-  background: none;
-  z-index: 4;
 }
 
 header .logo{
@@ -102,7 +83,7 @@ header .logo{
     max-height: 300px;
     padding: 20px 10% 0 2%;
 
-    background-color: white;
+    background-color: transparent;;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -118,7 +99,7 @@ nav#main-nav {
   justify-content: space-between;
   width: 100%;
 
-  z-index: 1;
+  z-index: 9;
 
   min-height: var(--navbar-height);
   height: auto;
@@ -178,7 +159,13 @@ nav#main-nav {
 }
 
 @media screen and (max-width: 800px) {
-
+header.logo-container{
+  margin-top: 30px;
+}
+ nav#main-nav{
+    background-color: var( --navbar-background) !important;
+    position: fixed;
+ }
   #main-nav ul {
    position: relative;
 
@@ -207,12 +194,11 @@ nav#main-nav {
   }
 
   #main-nav .menu-hoofdmenu-container{
-    position: fixed;
-    top: 0;
-    background-color: white;
-    height: auto;
-    height: 0;
+    background-color: white !important;
+    width: 100% !important;
     opacity: 1;
+    height: 0;
+
     transition: height 0.5s ease;
     overflow: hidden;
     z-index: 1;
@@ -289,7 +275,7 @@ nav#main-nav {
     height: calc(100vh) !important;
     background-color: white !important;
     width: 100% !important;
-    opacity: 1;
+    opacity: 1 !important;
   }
   button.hamburger.active + .menu-hoofdmenu-container  ul li {
     opacity: 1 !important;

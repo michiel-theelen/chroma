@@ -17,7 +17,6 @@
 
 <body>
     <div class="viewport">
-        <div>
 
             <!-- Header with logo -->
             <header class="logo-container">
@@ -29,8 +28,6 @@
 
             <!-- Responsive Navigation Bar -->
             <nav id="main-nav" class="sticky shadow">
-
-
 
               <!-- Hamburger icon mobile layout -->
               <button class="hamburger">
