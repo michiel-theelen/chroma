@@ -45,6 +45,11 @@ cursor: pointer;
   margin-left: 20px;
   padding-left: 35px;
   border-left: 1px solid #f0f0f0;
+
+  h3{
+    font-size: 21px;
+    margin: 0 auto;
+  }
 }
 
 .blog-post-thumbnail{
@@ -196,7 +201,11 @@ cursor: pointer;
 
 .blog-post-excerpt p{
   text-align: left;
+  font-size: 1.5rem;
+  line-height: 1.9rem;
 }
+
+blog-posta
 
 /* -------------------
  * Single post page

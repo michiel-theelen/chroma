@@ -22,10 +22,22 @@ get_header(); ?>
 /* Style the buttons */
 .search-container {
 	display: flex;
+	flex-wrap: wrap;
 }
 
+.category-container{
+	display: flex;
+	flex-grow: 1;
+	flex-basis: auto;
+	flex-wrap: nowrap;
+	width: auto;
+	justify-content: space-between;
+}
 .category-filter {
 display: inline-block;
+flex-basis: auto;
+flex-grow: 1;
+width: auto;
 align-items: center;
 font-size: 1.6rem;
 padding: 1em 1em;
@@ -58,12 +70,12 @@ color: #fff;
 </style>
 
 <div class="search-container">
-	<fieldset>
-			<input type="search" class="text-input" id="live-search" style="flex:1;" placeholder="Type hier om te zoeken binnen mijn blog..." />
+	<fieldset style="min-width: 40%; flex:1;">
+			<input type="search" class="text-input" id="live-search" placeholder="Type hier om te zoeken binnen mijn blog..." />
 			<!-- <span id="filter-count" style="display: flex; align-self: center; height: 50px; line-height:50px;width: 30px; margin-left: 1em; color: var(--blog-color);" ></span> -->
 	</fieldset>
 
-	<div class="category-container" style="">
+<div class="category-container">
 		<!-- <button class="category-filter">Alles</button> -->
 		<?php $categories=get_categories($cat_args);
 		  foreach($categories as $category) {
@@ -110,7 +122,7 @@ color: #fff;
 						<span class="blog-post-date" style="width:auto">
 							<?php echo get_the_date(); ?>
 						</span>
-						<div class="blog-post-excerpt" style="height:100px; overflow: hidden; text-overflow: ellipsis;">
+						<div class="blog-post-excerpt" style="height:140px; overflow: hidden; text-overflow: ellipsis;">
 							<?php the_content(); ?>
 						</div>
 						<a href="<?php the_permalink(); ?>">
