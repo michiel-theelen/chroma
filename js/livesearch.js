@@ -44,13 +44,18 @@ var $ = jQuery.noConflict();
 $(document).ready(function(){
 
   $(".category-container .category-filter").click(function () {
-        $(".category-container .category-filter").removeClass("active");
+        $(".category-filter.active").removeClass("active");
         $(this).addClass("active");
         someFunction();
         e.preventDefault(); /*ignores actual link*/
     });
 
     $(".hamburger").click(function () {
+      var offset = $(this).offset();
+      var offset = offset.top;
+      var height = offset.top + $(window).height();
+      $(".menu-hoofdmenu-container").height(height);
+
           $(this).toggleClass("active");
     });
 

@@ -16,7 +16,7 @@ html {
 
 @media (prefers-reduced-motion: reduce) {
 	html {
-		scroll-behavior: auto;
+		// scroll-behavior: auto;
 	}
 }
 
@@ -174,7 +174,7 @@ Inter variable font. Usage:
 @media ( prefers-reduced-motion: reduce ) {
 
 	* {
-		animation-duration: 0s !important;
-		transition-duration: 0s !important;
+		// animation-duration: 0s !important;
+		//transition-duration: 0s !important;
 	}
 }

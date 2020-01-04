@@ -33,7 +33,7 @@
 
 
               <!-- Hamburger icon mobile layout -->
-              <button class="hamburger" >
+              <button class="hamburger">
                   <span></span> <!-- nth-last-child(3) -->
                   <span></span> <!-- nth-last-child(2) -->
                   <span></span> <!-- nth-last-child(1) -->
