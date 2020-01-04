@@ -50,6 +50,10 @@ $(document).ready(function(){
         e.preventDefault(); /*ignores actual link*/
     });
 
+    $(".hamburger").click(function () {
+          $(this).toggleClass("active");
+    });
+
   var count = $('.blog-post').length
   $("#filter-count").text(count);
 

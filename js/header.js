@@ -2,11 +2,8 @@ var $ = jQuery.noConflict();
 $(document).ready(function(){
 
   $(".hamburger").click(function () {
-        $(".category-container .category-filter").removeClass("active");
-        $(this).addClass("active");
-        someFunction();
-        e.preventDefault(); /*ignores actual link*/
-    });
+        $(this).toggleClass("active");
+  });
 
   var count = $('.blog-post').length
   $("#filter-count").text(count);
