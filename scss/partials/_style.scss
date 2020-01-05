@@ -29,6 +29,7 @@ html, body {
   margin: 0;
   padding: 0;
   background-color: white;
+  overflow-x: hidden;
 
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
@@ -67,6 +68,22 @@ html, body {
 /* ------------------------------------------------
  * Header Styles
  * --------------------------------------------- */
+.admin-bar nav{
+  top: 32px; left: 0;
+  position: fixed;
+}
+@media screen and (max-width: 782px) {
+  .admin-bar nav {
+  top: 46px;
+  position: fixed;
+  }
+}
+
+@media screen and (max-width: 600px), all {
+  #wpadminbar {
+  position: fixed;
+  }
+}
 
 header.logo-container{
   position: relative;
@@ -374,6 +391,57 @@ nav#main-nav {
   background-position: center;
 }
 
+/* SLIDER 3
+------------------------------------------*/
+
+.swiper-container3 {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding: 0;
+  background-color: white;
+}
+
+#slider3 .swiper-slide {
+  position: relative;
+
+  width: 100%;
+  height: 100vh;
+
+  background-size: cover;
+  background-position: center;
+}
+
+/* SLIDER 4
+------------------------------------------*/
+#slider4 img {
+  width: 100%;
+  height: auto;
+}
+
+.swiper-container4 {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding: 0;
+  background-color: white;
+  overflow: hidden;
+}
+
+#slider4 .swiper-slide {
+  width: 100%;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+}
+
+#slider4 .swiper-wrapper {
+  width: 100%;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+}
+
 /* ----------------------------------------
 /* OTHER
 ------------------------------------------*/
@@ -436,16 +504,6 @@ nav#main-nav {
 
   background-size: cover;
   background-position: center;
-}
-
-.swiper-slide img {
-  flex-shrink: 0;
-
-  width: 100%;
-  height: 100%;
-
-  min-width: 100%;
-  min-height: 100%
 }
 
 /* ------------------------------------------------

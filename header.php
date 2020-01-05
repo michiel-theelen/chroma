@@ -15,7 +15,7 @@
     </title>
 </head>
 
-<body>
+<body <?php body_class(); ?>>
     <div class="viewport">
 
             <!-- Header with logo -->

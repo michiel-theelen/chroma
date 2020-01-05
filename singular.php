@@ -5,7 +5,7 @@
 
 	<!-- Content of blog post: -->
 	<!-- title, thumb, content, nav, comments -->
-	<div class="blog-single" style="margin-top: 50px">
+	<div class="blog-single" style="display: flex; margin-top: 50px">
 		<?php get_template_part( 'content', get_post_format() );
 
 /* End of the loop. */

@@ -65,6 +65,23 @@ $(document).ready(function(){
   var count = $('.blog-post').length
   $("#filter-count").text(count);
 
+  $(window).scroll(function(){
+      var contactposition = $('#contact').offset();
+      var vormposition = $('#vorm').offset();
+
+      if ( $(this).scrollTop() >= (contactposition.top - 300) ) {
+        $('#menu-item-1864').removeClass('current_page_item');
+        $('#menu-item-1865').addClass('current_page_item');
+      } else if ( $(this).scrollTop() >= vormposition.top ) {
+        $('#menu-item-1864').addClass('current_page_item');
+        $('#menu-item-1865').removeClass('current_page_item');
+      } else {
+        $('#menu-item-1864').removeClass('current_page_item');
+        $('#menu-item-1865').removeClass('current_page_item');
+      }
+  });
+  //trigger the scroll
+  $(window).scroll();//ensure if you're in current position when page is refreshed
 
 });
 // Add our event listeners

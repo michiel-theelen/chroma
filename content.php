@@ -5,10 +5,37 @@
 	<!-- Title of blog post -->
 	<h1 class="blog-post-title-single"><?php the_title(); ?></h1>
 
-	<?php if ( has_post_thumbnail() ) { ?>
-		<!-- loads thumbnail if it exists -->
-		<div class="blog-post-thumbnail-single"><?php the_post_thumbnail();?></div>
-	<?php } ?>
+		<?php // array with parameters
+		$args = array(
+			'post_parent' => $post->ID,
+			'post_type' => 'attachment',
+			'orderby' => 'menu_order', // you can also sort images by date or be name
+			'order' => 'ASC',
+			'numberposts' => 20, // number of images (slides)
+			'post_mime_type' => 'image'
+			);
+
+			$images = get_children( $args );
+			// if there are no images in post, don't display anything
+			if ( sizeof($images) > 1  ) { ?>
+
+				<div id="slider4" class="swiper-container4">
+					<div class="swiper-wrapper">
+
+						<?php foreach( $images as $image ) { ?>
+							<div class="swiper-slide"><img src="<?php echo wp_get_attachment_image_url( $image->ID, $size = 'full');?>"></img></div>
+						<?php } ?>
+
+					</div>
+			</div>
+		<?php } else { ?>
+				<div class="blog-post-thumbnail-single"><?php the_post_thumbnail();?></div>
+		<?php } ?>
+
+		<!-- Loads neccessary javascript for slider functionality -->
+		<script src="<?php echo get_template_directory_uri(); ?>/js/swiper.min.js"></script>
+		<script src="<?php echo get_template_directory_uri(); ?>/js/swiper.js"></script>
+
 
 	<!-- loads content -->
 	<div class="blog-post-content-single shadow"><?php the_content(); ?></div>

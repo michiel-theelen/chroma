@@ -1,3 +1,4 @@
+window.addEventListener('load', () => {
 
 var mySwiper = new Swiper ('.swiper-container1', {
   // Optional parameters
@@ -108,3 +109,49 @@ var mySwiper3 = new Swiper ('.swiper-container3', {
     el: '.swiper-scrollbar3',
   },
 })
+
+var mySwiper4 = new Swiper ('.swiper-container4', {
+  // Optional parameters
+  direction: 'horizontal',
+  loop: true,
+  slidesPerView: 1,
+  speed: 500,
+  centeredSlides: true,
+  keyboard: true,
+  spaceBetween: 0,
+  effect: 'fade',
+  crossFade: true,
+
+  // Disable preloading of all images
+  preloadImages: false,
+  // Enable lazy loading
+  lazy: {
+    loadPrevNext: true,
+    loadPrevNextAmount: 1,
+    loadOnTransitionStart: true,
+  },
+
+  autoplay: {
+    delay: 3500,
+    disableOnInteraction: false,
+  },
+
+  // If we need pagination
+  pagination: {
+        el: '.swiper-pagination3',
+        clickable: true,
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next3',
+    prevEl: '.swiper-button-prev3',
+  },
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: '.swiper-scrollbar3',
+  },
+})
+
+  }, false);
