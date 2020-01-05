@@ -51,12 +51,9 @@ $(document).ready(function(){
     });
 
     $(".hamburger").click(function () {
-      var offset = $(this).offset();
-      var offset = offset.top;
-      var height = offset.top + $(window).height();
-      $(".menu-hoofdmenu-container").height(height);
 
           $(this).toggleClass("active");
+          $("body").toggleClass("disableScroll")
     });
 
   var count = $('.blog-post').length

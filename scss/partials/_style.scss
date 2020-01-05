@@ -16,8 +16,12 @@ Version: 0.1
   --blog-color: rgb(0, 132, 165);
 }
 
-.fixedposition{
-  position: fixed;
+.disableScroll {
+  overflow: hidden;
+}
+
+body{
+  overflow: auto;
 }
 html, body {
   -webkit-font-smoothing: antialiased;
@@ -40,16 +44,8 @@ html, body {
  {
     width: 95%;
     max-width: 1200px;
-
     margin: auto;
     padding: 0;
-}
-
-/* Width of the page */
-.viewport > div {
-  width: 95%;
-
-  margin:auto;
 }
 
 #intro .content {
@@ -58,7 +54,7 @@ html, body {
 
 .content {
   width: 90%;
-  margin: auto;
+  margin: 0 auto 1em;
 
   display: flex;
   flex-direction: column;
@@ -165,6 +161,7 @@ header.logo-container{
  nav#main-nav{
     background-color: var( --navbar-background) !important;
     position: fixed;
+    left: 0;
  }
   #main-nav ul {
    position: relative;
