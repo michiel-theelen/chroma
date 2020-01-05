@@ -21,8 +21,8 @@ Version: 0.1
 }
 
 body{
-  overflow: auto;
 }
+
 html, body {
   -webkit-font-smoothing: antialiased;
 
@@ -68,8 +68,9 @@ html, body {
  * Header Styles
  * --------------------------------------------- */
 
-header .logo-container{
+header.logo-container{
   position: relative;
+  margin: 80px 0 30px;
 }
 
 header .logo{
@@ -155,9 +156,7 @@ nav#main-nav {
 }
 
 @media screen and (max-width: 800px) {
-header.logo-container{
-  margin-top: 30px;
-}
+
  nav#main-nav{
     background-color: var( --navbar-background) !important;
     position: fixed;
@@ -205,7 +204,7 @@ header.logo-container{
 
   /* Creates new "Hamburger" Icon */
   .hamburger{
-    position: relative;
+    position: absolute;
     display: flex;
     flex-direction: column;
     justify-content: space-around;

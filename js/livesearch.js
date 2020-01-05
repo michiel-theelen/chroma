@@ -56,6 +56,12 @@ $(document).ready(function(){
           $("body").toggleClass("disableScroll")
     });
 
+    $("li").click(function () {
+
+          $(".hamburger").toggleClass("active");
+          $("body").toggleClass("disableScroll")
+    });
+
   var count = $('.blog-post').length
   $("#filter-count").text(count);
 
