@@ -37,7 +37,7 @@
                 </span> <!-- nth-last-child(2) -->
                 <span>
                   <span></span>
-                </span><!-- nth-last-child(1) -->
+                </span> <!-- nth-last-child(1) -->
               </button>
               <!-- Navigation menu loaded from wordpress -->
               <?php wp_nav_menu( array( 'theme_location' => 'main-nav') ); ?>

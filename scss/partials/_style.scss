@@ -237,13 +237,15 @@ nav#main-nav {
     width: 40px;
     height: 2px;
     position: absolute;
-    opacity: 1;
-
-    background: #555;
+    background-color: #555;
 
     transform-origin: 0 0;
-    transition: transform 0.25s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0ms,
-                top 0.25s cubic-bezier(0.04, 0.04, 0.12, 0.96) 250ms;
+    transition: transform 0.25s cubic-bezier(0.04, 0.04, 0.12, 0.96),
+                top 0.25s cubic-bezier(0.04, 0.04, 0.12, 0.96) 250ms,
+                background-color 0.1s ease-in-out;
+}
+  button.hamburger:hover > span > span {
+    background-color: black;
   }
 
   button.hamburger.active > span > span {
@@ -259,9 +261,9 @@ nav#main-nav {
   }
   /* Rotates first one*/
   button.hamburger > span:nth-child(2) > span {
-    transform: rotate(0);
     transform-origin: 50%;
-    transition-delay: 250ms;
+    opacity: 1;
+    transition: opacity 0s cubic-bezier(0.04, 0.04, 0.12, 0.96) 250ms;
     top: 50%;
   }
   /* Rotates first one*/
