@@ -95,7 +95,7 @@ color: #fff;
 			$q    = new WP_Query( $args );
 		?>
 
-		<div class="blog-container" >
+		<div id="blog" class="blog-container" >
 
 			<?php while ( $q->have_posts() ) : $q->the_post(); ?>
 
@@ -146,4 +146,5 @@ color: #fff;
     </div>
 </div>
 
+<?php putRevSlider( 'revslider_flickr' ); ?>
 <?php get_footer();

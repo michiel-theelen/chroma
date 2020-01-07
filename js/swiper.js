@@ -115,7 +115,7 @@ var mySwiper4 = new Swiper ('.swiper-container4', {
   direction: 'horizontal',
   loop: true,
   slidesPerView: 1,
-  speed: 500,
+  speed: 2000,
   centeredSlides: true,
   keyboard: true,
   spaceBetween: 0,
@@ -132,7 +132,7 @@ var mySwiper4 = new Swiper ('.swiper-container4', {
   },
 
   autoplay: {
-    delay: 3500,
+    delay: 2500,
     disableOnInteraction: false,
   },
 
