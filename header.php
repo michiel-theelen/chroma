@@ -21,12 +21,14 @@
             <!-- Header with logo -->
             <header class="logo-container">
                 <a href="<?php bloginfo('wpurl');?>">
-                    <div class="logo" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/ic_chroma+voordevorm_24px.svg');"></div>
+                    <div class="logo" style="background-image:
+                    url(<?php echo get_template_directory_uri(); ?>/images/ic_chroma+voordevorm_24px.svg);"></div>
                 </a>
             </header>
 
             <!-- Responsive Navigation Bar -->
             <nav id="main-nav" class="sticky shadow">
+
               <!-- Hamburger icon mobile layout -->
               <button class="hamburger">
                 <span>
@@ -39,6 +41,10 @@
                   <span></span>
                 </span> <!-- nth-last-child(1) -->
               </button>
+
               <!-- Navigation menu loaded from wordpress -->
               <?php wp_nav_menu( array( 'theme_location' => 'main-nav') ); ?>
+
+
+
             </nav>
