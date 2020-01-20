@@ -3,6 +3,7 @@ $(document).ready(function(){
 
   $(".hamburger").click(function () {
         $(this).toggleClass("active");
+        body.toggleClass("disableScroll")
   });
 
   var count = $('.blog-post').length

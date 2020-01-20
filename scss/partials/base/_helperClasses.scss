@@ -18,17 +18,6 @@
 	min-height: 100vh;
 }
 
-.admin-bar .screen-height {
-	min-height: calc(100vh - 32px);
-}
-
-@media (max-width: 782px) {
-
-	.admin-bar .screen-height {
-		min-height: calc(100vh - 46px);
-	}
-}
-
 .screen-width {
 	position: relative;
 	left: calc(50% - 50vw);
@@ -396,4 +385,58 @@ ul.social-icons li {
 
 .cover-modal.show-modal > * {
 	cursor: default;
+}
+
+/* ------------------------------------------------
+ * Shadow styles
+ * --------------------------------------------- */
+
+.shadow-text {
+    text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+}
+.shadow {
+  -webkit-box-shadow: 0px 13px 25px -20px rgba(0,0,0,0.5);
+  -moz-box-shadow: 0px 13px 25px -20px rgba(0,0,0,0.5);
+  box-shadow: 0px 13px 25px -20px rgba(0,0,0,0.5);
+}
+
+
+/* ------------------------------------------------
+ * Sticky styles
+ * --------------------------------------------- */
+
+.sticky {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+}
+
+.sticky-ten {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: calc(var(--navbar-height) + 50px);
+}
+
+/* Sticky classes for when logged in */
+.admin-bar .sticky {
+  top: 32px;
+}
+
+@media screen and (max-width: 782px) {
+  .admin-bar nav {
+  top: 46px;
+  }
+}
+
+@media screen and (max-width: 600px), all {
+  #wpadminbar {
+  position: fixed;
+  }
+}
+
+/* ------------------------------------------------
+ * Disable scroll of element (body)
+ * --------------------------------------------- */
+.disableScroll {
+  overflow: hidden;
 }

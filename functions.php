@@ -67,48 +67,33 @@ function setting_twitter() { ?>
 		<input type="text" name="twitter" id="twitter" value="<?php echo get_option('twitter'); ?>" />
 		<?php }
 
-function setting_github() { ?>
-			<input type="text" name="github" id="github" value="<?php echo get_option('github'); ?>" />
+function setting_instagram() { ?>
+			<input type="text" name="instagram" id="instagram" value="<?php echo get_option('instagram'); ?>" />
 			<?php }
 
 function setting_facebook() { ?>
 			<input type="text" name="facebook" id="facebook" value="<?php echo get_option('facebook'); ?>" />
 			<?php }
+function setting_flickr() { ?>
+			<input type="text" name="flickr" id="flickr" value="<?php echo get_option('flickr'); ?>" />
+			<?php }
 
 function custom_settings_page_setup() {
   add_settings_section('section', 'All Settings', null, 'theme-options');
   add_settings_field('twitter', 'Twitter URL', 'setting_twitter', 'theme-options', 'section');
-  add_settings_field('github', 'GitHub URL', 'setting_github', 'theme-options', 'section');
-  add_settings_field('facebook', 'Facebook URL', 'setting_facebook', 'theme-options', 'section');
+  add_settings_field('instagram', 'Instagram URL', 'setting_instagram', 'theme-options', 'section');
+  add_settings_field('facebook', 'Facebook URL', 'setting_flickr', 'theme-options', 'section');
+	add_settings_field('flickr', 'Flickr URL', 'setting_facebook', 'theme-options', 'section');
 
 	register_setting('section', 'twitter');
-  register_setting('section', 'github');
+  register_setting('section', 'instagram');
   register_setting('section', 'facebook');
+	register_setting('section', 'flickr');
 }
 add_action( 'admin_init', 'custom_settings_page_setup' );
 
 // Support Featured Images
 add_theme_support( 'post-thumbnails' );
-
-// Custom Post Type
-function create_my_custom_post() {
-	register_post_type('my-custom-post',
-			array(
-			'labels' => array(
-					'name' => __('Committee Members'),
-					'singular_name' => __('Committee Members'),
-			),
-			'public' => true,
-			'has_archive' => true,
-			'supports' => array(
-					'title',
-					'editor',
-					'thumbnail',
-				  'custom-fields'
-			)
-	));
-}
-add_action('init', 'create_my_custom_post');
 
 // Add custom Navigation Sections
 function wpb_custom_new_menu() {
@@ -122,3 +107,15 @@ add_action( 'init', 'wpb_custom_new_menu' );
 
 // Customizer File
 require get_template_directory(). '/inc/customizer.php';
+
+function add_your_fields_meta_box() {
+    	add_meta_box(
+    		'your_fields_meta_box', // $id
+    		'Your Fields', // $title
+    		'show_your_fields_meta_box', // $callback
+    		'your_post', // $screen
+    		'normal', // $context
+    		'high' // $priority
+    	);
+    }
+    add_action( 'add_meta_boxes', 'add_your_fields_meta_box' );

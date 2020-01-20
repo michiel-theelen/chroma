@@ -24,8 +24,20 @@ h6,
 
 h1,
 .heading-size-1 {
-	font-size: 3.6rem;
-	line-height: 1.138888889;
+	width: 100%;
+	margin: 0;
+	margin-bottom: 20px;
+	padding: 0;
+	color: rgb(102, 102, 102);
+	border-bottom-color: rgb(222, 222, 222);
+	border-bottom-style: solid;
+	border-bottom-width: 2px;
+	font-size: 30px !important;
+	font-weight: 200;
+	line-height: 50px;
+	color: rgb(102, 102, 102);
+	color: black;
+	text-align: center;
 }
 
 h2,

@@ -51,15 +51,14 @@ $(document).ready(function(){
     });
 
     $(".hamburger").click(function () {
-
           $(this).toggleClass("active");
-          $("body").toggleClass("disableScroll")
+          //$("body").toggleClass("disableScroll")
     });
 
     $("li").click(function () {
 
           $(".hamburger").toggleClass("active");
-          $("body").toggleClass("disableScroll")
+          //$("body").toggleClass("disableScroll")
     });
 
   var count = $('.blog-post').length

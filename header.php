@@ -3,16 +3,15 @@
 
 <head>
     <meta charset="utf-8">
+    <meta name=”robots” content=”index, follow”>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
+    <meta name="description" content="Chroma is Bert Theelen, grafisch vormgever van communicatie-middelen die bestaan uit tekst en beeld. Met opdrachtgevers verspreid over het land werken we aan hoogwaardige producten, van logo tot website, van flyer tot boek.">
     <meta name="author" content="Michiel Theelen">
 
     <?php wp_head();?>
 
-    <title>
-        <?php wp_title( '|', true, 'right' ); ?>
-    </title>
+    <title><?php wp_title( '|', true, 'right' ); ?></title>
 </head>
 
 <body <?php body_class(); ?>>

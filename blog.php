@@ -14,7 +14,7 @@ get_header(); ?>
 
 	<style>
 .container {
-  margin-top: 20px;
+  margin-top: 1em;;
   overflow: hidden;
 	float: right;
 }
@@ -27,28 +27,29 @@ get_header(); ?>
 
 .category-container{
 	display: flex;
-	flex-grow: 1;
 	flex-basis: auto;
 	flex-wrap: nowrap;
 	width: auto;
-	justify-content: space-between;
+	justify-content: flex-start;
 }
 .category-filter {
 display: inline-block;
 flex-basis: auto;
-flex-grow: 1;
 width: auto;
 align-items: center;
 font-size: 1.6rem;
-padding: 1em 1em;
+padding: 0.5em 1em;
 background: #ebf1fe;
-border-radius: 4px;
-margin: 0 .5em;
+border-radius: 0px;
+margin: 0 .2em;
 height: 100%;
 font-weight: 600;
 color: #5183f5;
 cursor: pointer;
 border: none;
+}
+.category-filter:first-child{
+	margin-left: 0.4em;
 }
 
 .category-filter:hover{
@@ -67,10 +68,30 @@ background: #5183f5;
 color: #fff;
 }
 
+@media screen and (max-width: 800px) {
+	.search-container{
+		display: block !important;
+	}
+	.category-filter{
+		margin-top: 1em;
+		flex: 1;
+	}
+	.category-filter:first-child{
+		margin-left: 0;
+	}
+	.category-filter:last-child{
+		margin-right: 0;
+	}
+}
+
+input[type=search]{
+	padding: .5em;
+}
+
 </style>
 
 <div class="search-container">
-	<fieldset style="min-width: 40%; flex:1;">
+	<fieldset style="flex:1;">
 			<input type="search" class="text-input" id="live-search" placeholder="Type hier om te zoeken binnen mijn blog..." />
 			<!-- <span id="filter-count" style="display: flex; align-self: center; height: 50px; line-height:50px;width: 30px; margin-left: 1em; color: var(--blog-color);" ></span> -->
 	</fieldset>
@@ -119,14 +140,14 @@ color: #fff;
 							</a>
 						</h3>
 
-						<span class="blog-post-date" style="width:auto">
+						<div class="blog-post-date" style="width:75px; margin: .5em 0;">
 							<?php echo get_the_date(); ?>
-						</span>
-						<div class="blog-post-excerpt" style="height:140px; overflow: hidden; text-overflow: ellipsis;">
-							<?php the_content(); ?>
+						</div>
+						<div class="blog-post-excerpt">
+							<p><?php echo wp_strip_all_tags( get_the_content() ); ?><p>
 						</div>
 						<a href="<?php the_permalink(); ?>">
-								<p style="color: rgb(0, 132, 165); font-size:14px; text-align: left;">
+								<p style="font-size:14px; text-align: left; color: var(--blog-color);">
 									Verder &#8594;
 								</p>
 						</a>

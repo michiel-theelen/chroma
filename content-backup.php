@@ -13,43 +13,11 @@
 			'order' => 'ASC',
 			'numberposts' => 20, // number of images (slides)
 			'post_mime_type' => 'image'
-			);
+		); ?>
 
-			$blog_slides = get_post_meta( get_the_ID( ), 'rnr_blogitemslides', false );
-
-			if(!empty($blog_slides)) { ?>
-				<div id="slider4" class="swiper-container4">
-					<div class="swiper-wrapper">
-
-		                <?php global $wpdb, $post;
-
-		                if ( !is_array( $blog_slides ) )
-		                    $blog_slides = ( array ) $blog_slides;
-
-		                if ( !empty( $blog_slides ) ) {
-
-		                    $blog_slides = implode( ',', $blog_slides );
-		                    $images = $wpdb->get_col( "
-		                    SELECT ID FROM $wpdb->posts
-		                    WHERE post_type = 'attachment'
-		                    AND ID IN ( $blog_slides )
-		                    ORDER BY menu_order ASC
-		                    " );
-
-		                    foreach ( $images as $att ) {
-		                        // Get image's source based on size, can be 'thumbnail', 'medium', 'large', 'full' or registed post thumbnails sizes
-		                        $image_src = wp_get_attachment_image_url( $att, $size = 'large' ); ?>
-		                        <div class="swiper-slide"><img class="swiper-lazy" data-src="<?php echo $image_src;?>"></div>
-		                    <?php
-		                    } // ends foreach loop
-		                } // ends if block (!empty $blogs_slides)
-		                ?>
-
-		            </ul>
-		        </div><!-- Ends Swiper Container -->
-		    </div><!-- Ends Swiper Wrapper -->
-		    <?php } else if ( sizeof($images) > 1  ) {
-				$images = get_children( $args ); ?>
+			<!-- Make image slider from children -->
+			<?php $images = get_children( $args );
+			if ( sizeof($images) > 1  ) { ?>
 
 				<div id="slider4" class="swiper-container4">
 					<div class="swiper-wrapper">
